@@ -57,7 +57,7 @@ const allCursos = async (req, res) => {
           let index = 0;
           let i = 0;
           let j = 0;
-          while((students.courses.length) && (control)){
+          while((students.courses.length > index) && (control)){
             
             if(students.courses[index].day){
             
@@ -67,11 +67,11 @@ const allCursos = async (req, res) => {
               }
 
               j++;
-              if ((i === students.courses[index].day.length) && (control.length < 1)){
+              if ((i === students.courses[index].day.length) && (control)){
                 i = 0;
                 index ++;
               }
-              if ((j === curso.day.length) && (control.length < 1)){
+              if ((j === curso.day.length) && (control)){
                 j = 0;
                 i++
               }
@@ -91,7 +91,7 @@ const allCursos = async (req, res) => {
             let index = 0;
             let i = 0;
             let j = 0;
-            while((teacher.courses.length) && (control)){
+            while((teacher.courses.length > index) && (control)){
               
               if(teacher.courses[index].day){
               
@@ -101,11 +101,11 @@ const allCursos = async (req, res) => {
                 }
   
                 j++;
-                if ((i === teacher.courses[index].day.length) && (control.length < 1)){
+                if ((i === teacher.courses[index].day.length) && (control)){
                   i = 0;
                   index ++;
                 }
-                if ((j === curso.day.length) && (control.length < 1)){
+                if ((j === curso.day.length) && (control)){
                   j = 0;
                   i++
                 }
