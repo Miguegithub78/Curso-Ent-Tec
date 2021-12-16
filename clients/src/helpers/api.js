@@ -1,5 +1,5 @@
 
-const url = `http://localhost:3001/cursos`;
+const url = `https://newcoursesapp.herokuapp.com/cursos`;
 
 export const fetchCursos = async () => {
   const response = await fetch(url);
@@ -8,14 +8,14 @@ export const fetchCursos = async () => {
 }
 
 export const fetchCurso = async (id) => {
-  const response = await fetch(`http://localhost:3001/cursos/${id}`);	
+  const response = await fetch(`https://newcoursesapp.herokuapp.com/cursos/${id}`);	
   const curso = await response.json();
   return curso;
 }
 
 export const putCurso = async (id, payload) => {
   console.log(payload)
-  const response = await fetch(`http://localhost:3001/cursos/${id}`, {
+  const response = await fetch(`https://newcoursesapp.herokuapp.com/cursos/${id}`, {
     method: 'PUT',
     body: JSON.stringify(payload),
     headers: {
@@ -38,7 +38,7 @@ export const postCursos = async (payload) => {
   return cursos;
 }
 
-const urlTeachers = 'http://localhost:3001/teachers';
+const urlTeachers = 'https://newcoursesapp.herokuapp.com/teachers';
 
 export const fetchTeachers = async () => {
   const response = await fetch(urlTeachers);
@@ -65,7 +65,7 @@ export const postTeachers = async (payload) => {
   return teachers;
 }
 
-const urlStudents = 'http://localhost:3001/students';
+const urlStudents = 'https://newcoursesapp.herokuapp.com/students';
 
 export const fetchStudents = async () => {
   const response = await fetch(urlStudents);
