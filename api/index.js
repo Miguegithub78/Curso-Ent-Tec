@@ -1,6 +1,6 @@
 const app = require('./app');
 const mongoose = require('mongoose');
-//const { userDatabase, password} = require('./config.env/index');
+
 
 require('dotenv').config();
 
